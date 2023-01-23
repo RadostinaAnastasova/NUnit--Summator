@@ -27,7 +27,7 @@ namespace Summator
             }
             else
             {
-                Console.WriteLine("Test Pass");
+                Console.WriteLine("Test_SumTwoNumbers Pass");
             }
                 
         }
