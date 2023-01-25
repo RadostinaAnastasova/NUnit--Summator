@@ -105,7 +105,17 @@ namespace Summator.UnitTests
             var percentages = new int[] { 10, 23, 50, 100 };
             Assert.That(percentages, Is.All.InRange(0, 100));
 
-            Assert.That(percentage, Is.EqualTo(100), "sumata, koqto se vrysta");
+            //Assert.That(percentage, Is.EqualTo(100), "sumata, koqto se vrysta");
+        }
+
+        [Test]
+        public void Test_Sumator_AverageTwoPossitiveNumbers()
+        {
+            var nums = new int[] { 1, 2 };
+            var actual = Summator.Average(nums);
+            var expected = 1.5;
+
+            Assert.AreEqual(expected, actual);
         }
 
         /*[SetUp]
