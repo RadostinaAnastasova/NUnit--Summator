@@ -109,7 +109,17 @@ namespace Summator.UnitTests
         }
 
         [Test]
-        public void Test_Sumator_AverageTwoPossitiveNumbers()
+        public void Test_Sumator_AverageTwoPossitiveIntNumbers()
+        {
+            var nums = new int[] { 3, 5 };
+            var actual = Summator.Average(nums);
+            var expected = 4;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Test_Sumator_AverageTwoPossitiveDoubleNumbers()
         {
             var nums = new int[] { 1, 2 };
             var actual = Summator.Average(nums);
