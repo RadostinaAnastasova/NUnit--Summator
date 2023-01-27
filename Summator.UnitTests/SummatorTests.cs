@@ -128,6 +128,20 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        [TestCase(new int[] { 1, 2 }, 3)]
+        [TestCase(new int[] { -1, -2 }, -3)]
+        [TestCase(new int[] { -3, -8 }, -11)]
+        [TestCase(new int[] { 5, 0 }, 5)]
+        [TestCase(new int[] {1}, 1)]
+        [TestCase(new int[] {0}, 0)]
+        public void Test_Summator_SumDDT(int[] values, long expected)
+        {
+            var actual = Summator.Sum(values);
+
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
         /*[SetUp]
         public void Setup()
         {
